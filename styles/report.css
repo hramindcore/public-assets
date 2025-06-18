@@ -1,0 +1,198 @@
+@page {
+  size: A4;
+  margin: 20mm 15mm 25mm 15mm;
+
+  @top-center {
+    content: element(pdf-header);
+  }
+
+  @bottom-center {
+    content: element(pdf-footer);
+  }
+}
+
+body {
+  margin: 0;
+  font-family: "Work Sans", sans-serif;
+  background: white;
+  counter-reset: page;
+}
+
+/* Page break handling for print/PDF must be outside of the 
+  @media print, as iText conversion does not interpret this */
+.page-break {
+  page-break-before: always;
+  break-before: page;
+}
+
+/* Use borders and shadows on screen */
+@media screen {
+  .page-break {
+    display: none;
+  }
+
+  #pdf-header,
+  #pdf-footer {
+    display: none;
+  }
+
+  .wrapper {
+    width: 100%;
+    padding: 20mm;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .content {
+    flex: 1;
+  }
+}
+
+/* media print/pdf adjustments */
+@media print {
+
+  body {
+    background: none;
+    /* box-shadow: none; */
+  }
+
+  .wrapper {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-shadow: none;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .content {
+    flex: 1;
+  }
+
+  table {
+    page-break-inside: avoid;
+  }
+}
+
+.site-header {
+  width: 100%;
+}
+
+.header-title {
+  margin: 0;
+  font-size: 24px;
+  color: #004C6E;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+  margin-right: 15px;
+}
+
+.image-container {
+  display: flex;
+  align-items: center;
+  padding-top: 5mm;
+  padding-bottom: 10mm;
+}
+
+.image-full-width {
+  width: 90%;
+  height: auto;
+  margin-right: 15px;
+}
+
+h1 {
+  color: #000099;
+  font-size: 28px;
+}
+
+h2 {
+  color: #000099;
+  font-size: 16px;
+}
+
+h3,
+h4 {
+  color: #5656e0;
+  font-size: 14px;
+}
+
+p {
+  margin: 0 0 10px;
+  font-size: 14px;
+  color: #464242;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 10px;
+  word-wrap: break-word;
+  table-layout: fixed;
+}
+
+th,
+td {
+  padding: 6px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+th {
+  background: linear-gradient(#49708f, #293f50);
+  color: #fff;
+  font-size: 11px;
+}
+
+#CreationDate {
+  color: rgb(45, 13, 228);
+  font-size: 12px;
+}
+
+/* Running header and footer for PDF only */
+#pdf-header {
+  position: running(pdf-header);
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+/* PDF-specific header/footer */
+#pdf-footer {
+  position: running(pdf-footer);
+  text-align: center;
+  font-size: 10px;
+  color: #999;
+  border-top: 1px solid #ccc;
+  padding-top: 5px;
+}
+
+/* Simulate Page X */
+.pdf-page-number:before {
+  content: "Page " counter(page);
+}
+
+.footer {
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+}
