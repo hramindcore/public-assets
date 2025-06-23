@@ -143,7 +143,7 @@ p {
 table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 10px;
+  font-size: 12px;
   word-wrap: break-word;
   table-layout: fixed;
 }
@@ -158,7 +158,7 @@ td {
 th {
   background: linear-gradient(#49708f, #293f50);
   color: #fff;
-  font-size: 11px;
+  font-size: 12px;
 }
 
 #CreationDate {
