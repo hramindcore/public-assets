@@ -217,6 +217,14 @@ th {
   }
 }
 
+.customHtml-subtable-no-border {
+  td {
+    border: none;
+    padding: 3px;
+    text-align: left;
+  }
+}
+
 .group-ownership-table-col3 {
   width: 11%;
 }
