@@ -201,3 +201,30 @@ th {
   padding: 10px;
   text-align: center;
 }
+
+/* styles for specific tables */
+.customHtml-subtable {
+  td {
+    padding: 3px;
+    border: 1px solid #ccc;
+    text-align: left;
+  }
+
+  th {
+    background: linear-gradient(#49708f, #293f50);
+    color: #fff;
+    font-size: 10px;
+  }
+}
+
+.group-ownership-table-col3 {
+  width: 10%;
+}
+
+.group-ownership-table-col4 {
+  width: 10%;
+}
+
+.group-ownership-table-col5 {
+  width: 30%;
+}
