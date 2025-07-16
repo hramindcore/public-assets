@@ -203,6 +203,12 @@ th {
 }
 
 /* styles for specific tables */
+.customHtml-table {
+  td {
+    vertical-align: top;
+  }
+}
+
 .customHtml-subtable {
   td {
     padding: 3px;
