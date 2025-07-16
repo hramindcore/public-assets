@@ -217,11 +217,9 @@ th {
   }
 }
 
-.customHtml-subtable-no-border {
+.no-cell-border {
   td {
     border: none;
-    padding: 3px;
-    text-align: left;
   }
 }
 
