@@ -229,7 +229,8 @@ th {
   }
 }
 
-/* Special tables with subtables */
+/****** Special tables with subtables ******/
+/* Group Ownership table */
 .group-ownership-table-col3 {
   width: 11%;
 }
@@ -245,10 +246,17 @@ th {
   width: 40%;
 }
 
+
+/* Archived Teams or Channels table */
 .archived-teams-table-col3 {
   width: 11%;
 }
 
 .archived-teams-table-col4 {
+  width: 40%;
+}
+
+/* Teams Channels with email table */
+.teams-channels-email-table-col3 {
   width: 40%;
 }
