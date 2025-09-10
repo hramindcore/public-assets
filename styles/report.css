@@ -234,36 +234,3 @@ th {
     border: none;
   }
 }
-
-/****** Special tables with subtables ******/
-/* Group Ownership table */
-.group-ownership-table-col3 {
-  width: 11%;
-}
-
-.group-ownership-table-col4 {
-  width: 11%;
-}
-
-.group-ownership-subtable-col3 {
-  width: 25%;
-}
-
-.group-ownership-table-col5 {
-  width: 40%;
-}
-
-
-/* Archived Teams or Channels table */
-.archived-teams-table-col3 {
-  width: 11%;
-}
-
-.archived-teams-table-col4 {
-  width: 40%;
-}
-
-/* Teams Channels with email table */
-.teams-channels-email-table-col3 {
-  width: 40%;
-}
