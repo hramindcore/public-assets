@@ -143,6 +143,11 @@ p {
   margin: 0 0 10px;
   font-size: 14px;
   color: #464242;
+
+  .no-data-found {
+    font-style: italic;
+    color: #c28f30;
+  }
 }
 
 table {
