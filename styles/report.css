@@ -143,11 +143,12 @@ p {
   margin: 0 0 10px;
   font-size: 14px;
   color: #464242;
+}
 
-  .no-data-found {
-    font-style: italic;
-    color: #c28f30;
-  }
+/* paragraph for when tables are not found */
+.no-data-found {
+  font-style: italic;
+  color: #c28f30;
 }
 
 table {
@@ -247,6 +248,7 @@ th {
 .group-ownership-subtable-col3 {
   width: 25%;
 }
+
 .group-ownership-table-col5 {
   width: 40%;
 }
